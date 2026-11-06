@@ -1,0 +1,11 @@
+[
+  {
+    "id": "3c1435a5-ccd3-483a-97c6-84dbbfd8708e",
+    "name": "Low Fade",
+    "description": "Corte moderno echo a maquina",
+    "duration": 60,
+    "price": 15000,
+    "category": "Corte",
+    "available": true
+  }
+]
