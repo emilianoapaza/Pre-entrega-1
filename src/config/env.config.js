@@ -7,7 +7,7 @@ dotenv.config()
 //     throw new Error("Falta configurar MONGO_URI")
 // }
 
-const requiredVariables = ["MONGO_URI"]
+const requiredVariables = ["PORT", "NODE_ENV"]
 
 for (const envVar of requiredVariables) {
     if (!process.env[envVar]) {
@@ -18,8 +18,7 @@ for (const envVar of requiredVariables) {
 export const envConfig = {
     port: Number(process.env.PORT) || 8080,
     nodeEnv: process.env.NODE_ENV || "development",
-    appName: process.env.APP_NAME || "Sistema Backend",
-    mongoUri: process.env.MONGO_URI
+    appName: process.env.APP_NAME || "Sistema Backend"
 }
 
 

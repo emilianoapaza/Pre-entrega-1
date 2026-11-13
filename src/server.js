@@ -8,7 +8,7 @@ import ServiceManager from "./managers/ServiceManager.js";
 
 const serviceManager = new ServiceManager();
 
-const newService = await serviceManager.addServices({
+const newService = await serviceManager.addService({
     name: "Low Fade",
     description: "Corte moderno echo a maquina",
     duration: 60,
@@ -19,9 +19,9 @@ const newService = await serviceManager.addServices({
 
 console.log("Creado:", newService)
 
-console.log("Buscado: ", await serviceManager.getServicesByID(newService.id))
+console.log("Buscado: ", await serviceManager.getServiceByID(newService.id))
 
-console.log("Actualizado: ", await serviceManager.updateServices(newService.id, { id: 15 }))
+console.log("Actualizado: ", await serviceManager.updateService(newService.id, { id: 15 }))
 
 console.log("Eliminado: ", await serviceManager.deleteService(newService.id))
 

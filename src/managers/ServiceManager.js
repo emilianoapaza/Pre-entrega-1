@@ -20,12 +20,12 @@ class ServiceManager {
         return await this.readServices();
     }
 
-    async getServicesByID(id) {
+    async getServiceByID(id) {
         const services = await this.readServices()
         return services.find(service => service.id === id) || null;
     }
 
-    async addServices(serviceData) {
+    async addService(serviceData) {
         const requiredFields = [
             "name",
             "description",
@@ -57,7 +57,7 @@ class ServiceManager {
         return newServices
     }
 
-    async updateServices(id, updateData) {
+    async updateService(id, updateData) {
         const services = await this.readServices()
         const index = services.findIndex(service => service.id === id)
 
